@@ -1,0 +1,282 @@
+/* Global styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333;
+    background-color: #fff;
+  }
+  
+  a {
+    text-decoration: none;
+    color: #000;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  .btn {
+    display: inline-block;
+    background-color: #00c853;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+  }
+  
+  .btn:hover {
+    background-color: #009624;
+  }
+  
+  /* Header styles */
+  header {
+    background-color: #ffffff;
+    color: #008000;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+  }
+  
+  h1 {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0;
+  }
+  
+  nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+  
+  nav li {
+    margin: 0 10px;
+  }
+  
+  nav a {
+    text-decoration: none;
+    color: #008000;
+    font-weight: bold;
+    font-size: 16px;
+    transition: color 0.2s ease-in-out;
+  }
+  
+  nav a:hover {
+    color: #6dd400;
+  }
+  
+  
+  @media screen and (max-width: 767px) {
+    header h1 {
+      font-size: 20px;
+    }
+  
+    header nav ul li a {
+      font-size: 14px;
+    }
+  }
+  
+  
+  
+  /* Heroes section styles */
+  #heroes .container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  
+  .hero-description {
+    flex: 1;
+  }
+  
+  .hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+  }
+  
+  .hero-image img {
+    width: 100%;
+    height: auto;
+    max-height: 450px;
+  }
+  
+
+
+  
+  
+  
+  /* Value propositions section styles */
+  #value-propositions {
+    padding: 100px 0;
+    background-color: #f7f7f7;
+  }
+  
+  .value-proposition {
+    max-width: 300px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .value-proposition h3 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .value-proposition p {
+    font-size: 18px;
+    margin-bottom: 30px;
+  }
+  
+  .value-proposition:last-child {
+    margin-bottom: 0;
+  }
+  
+  /* Contact section styles */
+  #contact {
+    padding: 100px 0;
+  }
+  
+  #contact h2 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 30px;
+  }
+  
+  #contact form {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  #contact label {
+    display: block;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  #contact input,
+  #contact textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #f7f7f7;
+    font-size: 16px;
+  }
+  
+  #contact textarea {
+    height: 200px;
+  }
+  
+  #contact button {
+    display: block;
+    background-color: #00c853;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  #contact button:hover {
+    background-color: #009624;
+  }
+  
+  /* Footer styles */
+  footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  footer p {
+    font-size: 14px;
+    margin-bottom: 0;
+  }
+  
+  footer a {
+    color: #fff;
+    font-weight: bold;
+  }
+  
+  @media screen and (max-width: 767px) {
+    header {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  
+    header h1 {
+      margin-bottom: 20px;
+    }
+  
+    header nav ul {
+      margin-top: 20px;
+      flex-wrap: wrap;
+    }
+  
+    header nav ul li {
+      margin-left: 0;
+      margin-right: 20px;
+      margin-bottom: 10px;
+    }
+  
+    #heroes {
+      flex-direction: column;
+      height: auto;
+      padding: 100px 0;
+    }
+  
+    .hero-description {
+      margin-right: 0;
+      text-align: center;
+    }
+  
+    .hero-image {
+      margin-top: 50px;
+    }
+  
+    #value-propositions {
+      padding: 50px 0;
+    }
+  
+    .value-proposition {
+      margin-bottom: 50px;
+    }
+  
+    #contact {
+      padding: 50px 0;
+    }
+  
+    #contact form {
+      max-width: none;
+    }
+  
+    #contact input,
+    #contact textarea {
+      margin-bottom: 10px;
+    }
+  }
+  
