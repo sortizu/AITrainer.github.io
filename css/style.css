@@ -26,7 +26,7 @@
   
   .btn {
     display: inline-block;
-    background-color: #00c853;
+    background-color: #5FC298;
     color: #fff;
     padding: 10px 20px;
     border-radius: 5px;
@@ -41,7 +41,7 @@
   /* Header styles */
   header {
     background-color: #ffffff;
-    color: #008000;
+    color: #5FC298;
     height: 60px;
     display: flex;
     align-items: center;
@@ -68,7 +68,7 @@
   
   nav a {
     text-decoration: none;
-    color: #008000;
+    color: #5FC298;
     font-weight: bold;
     font-size: 16px;
     transition: color 0.2s ease-in-out;
@@ -94,6 +94,7 @@
   /* Heroes section styles */
   #heroes .container {
     display: flex;
+    height: 100vh;
     flex-direction: row;
     align-items: center;
   }
@@ -122,30 +123,46 @@
   
   /* Value propositions section styles */
   #value-propositions {
-    padding: 100px 0;
-    background-color: #f7f7f7;
+    height: 100vh;
+    background-color: #5FC298;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  #value-propositions .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    height: 80%;
+    background-image: none;
+    border: none;
   }
   
   .value-proposition {
-    max-width: 300px;
-    margin: 0 auto;
+    width: 25%;
+    height: 25%;
     text-align: center;
+    padding: 20px;
+    margin: 10px;
+    background-color: #FFFFFF;
+    color: #000000;
+    border: 2px solid #FFFFFF;
   }
   
   .value-proposition h3 {
-    font-size: 24px;
+    font-size: 1.5rem;
     font-weight: bold;
-    margin-bottom: 20px;
   }
   
   .value-proposition p {
-    font-size: 18px;
-    margin-bottom: 30px;
+    font-size: 1rem;
   }
   
-  .value-proposition:last-child {
-    margin-bottom: 0;
-  }
+  
+  
   
   /* Contact section styles */
   #contact {
