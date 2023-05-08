@@ -58,6 +58,7 @@
   .logo-container {
     display: flex;
     align-items: center;
+    justify-content: center; /* Añadir esta línea para centrar horizontalmente */
   }
   
   .logo-container img {
@@ -68,70 +69,15 @@
   /* CSS para dispositivos móviles */
 @media screen and (max-width: 767px) {
   /* Agregar botón para mostrar/ocultar menú */
-  .menu-toggle {
-    display: block;
-    position: absolute;
-    top: 0;
-    right: 0;
-    padding: 10px;
-    font-size: 16px;
-    cursor: pointer;
-  }
-
   /* Ocultar navegación */
   nav {
     display: none;
     width: 100%;
   }
-
-  /* Mostrar menú como una lista vertical */
-  nav ul {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    background-color: #ffffff;
-    margin: 0;
-    padding: 10px;
+  .logo-container h1{
+    padding-top: 20px; /* ajusta este valor según sea necesario */
   }
 
-  nav li {
-    margin: 10px 0;
-  }
-
-  /* Cambiar el tamaño de fuente del título */
-  header h1 {
-    font-size: 24px;
-    margin: 0;
-  }
-
-  /* Cambiar el tamaño de fuente de los enlaces de navegación */
-  nav a {
-    font-size: 20px;
-    text-align: center;
-  }
-
-  /* Cambiar el color del enlace activo */
-  nav a.active {
-    color: #009624;
-  }
-
-  /* Cambiar el color del fondo cuando se muestra el menú */
-  header.show-nav {
-    background-color: #ffffff;
-  }
-
-  /* Cambiar el color del enlace del botón de menú cuando se muestra el menú */
-  header.show-nav .menu-toggle {
-    color: #5FC298;
-  }
-
-  /* Cambiar el estilo del botón de menú cuando se muestra el menú */
-  header.show-nav .menu-toggle:before {
-    content: "\f00d";
-    font-family: "Font Awesome 5 Free";
-    font-weight: 900;
-  }
 }
 
 /* CSS para dispositivos de escritorio */
@@ -174,12 +120,76 @@
 
   
   /* Heroes section styles */
+
+  
+  /* CSS para dispositivos moviles */
+  @media screen and (max-width: 1000px) {
+    /* Agregar botón para mostrar/ocultar menú */
+    #heroes .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .buttons-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 30px;
+    }
+    .hero-image {
+      flex: 1;
+      display: flex;
+      justify-content: flex-end;
+      align-items: flex-end;
+      height: 100%;
+      order: 2; /* el elemento aparecerá primero en el orden */
+    }
+    #heroes {
+      flex-direction: column;
+      height: auto;
+      padding: 50px 0px 0px 0px;
+    }
+  
+    .hero-description {
+      margin-right: 0;
+      text-align: center;
+    }
+  
+    .hero-image {
+      margin-top: 50px;
+    }
+  }
+  /* CSS para dispositivos de escritorio */
+  @media screen and (min-width: 999px) {
+    /* Agregar botón para mostrar/ocultar menú */
+    
   #heroes .container {
     display: flex;
     flex-direction: row;
     align-items: center;
   }
   
+  .buttons-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 30px;
+  }
+  .hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    height: 100%;
+    order: 2; /* el elemento aparecerá primero en el orden */
+    
+  }
+  }
+
+  #heroes{
+    margin: 0px;
+  }
+
   .hero-description h2 {
     font-size: 48px;
     font-weight: bold;
@@ -197,17 +207,10 @@
   
   .hero-description {
     flex: 1;
-    order: 2; /* el elemento aparecerá después en el orden */
+    order: 1; /* el elemento aparecerá después en el orden */
   }
   
-  .hero-image {
-    flex: 1;
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
-    height: 100%;
-    order: 1; /* el elemento aparecerá primero en el orden */
-  }
+  
   
   .hero-image img {
     width: 100%;
@@ -216,24 +219,51 @@
     transition: transform 0.3s ease-in-out;
   }
   
-  
-  @media only screen and (max-width: 768px) {
-    #heroes .container {
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-    }
-    .hero-description {
-      order: 2;
-      margin-top: 20px;
-      text-align: center;
-    }
-    .hero-image {
-      order: 1;
-      margin-bottom: 20px;
-    }
+  .buttons-container .btn {
+    font-size: 18px;
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    text-decoration: none;
+    padding: 16px 24px;
+    margin-right: 10px;
+    height: 60px;
+    border: none;
+    border-radius: 5px;
+    color: #ffffff;
+    background-color: #5FC298;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
   }
   
+  .buttons-container .btn:hover {
+    background-color: #4c9a80;
+  }
+  
+  .buttons-container a:last-child {
+    margin-right: 0;
+  }
+  
+  .buttons-container .social-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px; /* Ancho del botón de Facebook */
+    width: 60px; /* Altura del botón de Facebook */
+    margin-left: 10px;
+    border-radius: 5px;
+    background-color: #5FC298;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  .buttons-container .social-btn:hover {
+    background-color: #3f846d;
+  }
+  
+  .buttons-container .social-btn img {
+    width: 50%;
+    height: auto;
+  }
   
   
   /* Value propositions section styles */
@@ -245,7 +275,7 @@
     justify-content: center;
     align-items: center;
     background-color: #5FC298;
-    background-image: url('../img/patron.png');
+    background-image: url('https://raw.githubusercontent.com/sortizu/AITrainer.github.io/main/img/patron.png');
     background-repeat: repeat;
     background-size: auto;
     background-position: center;
@@ -311,7 +341,7 @@
     display: block;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1280px) {
     #value-propositions .container {
         flex-wrap: wrap;
     }
@@ -324,7 +354,7 @@
   
   
   /* Contact section styles */
-  @media (max-width: 767px) {
+  @media (max-width: 1280px) {
     #contact .row {
       flex-direction: column;
     }
@@ -444,20 +474,7 @@
       margin-bottom: 10px;
     }
   
-    #heroes {
-      flex-direction: column;
-      height: auto;
-      padding: 100px 0;
-    }
-  
-    .hero-description {
-      margin-right: 0;
-      text-align: center;
-    }
-  
-    .hero-image {
-      margin-top: 50px;
-    }
+    
   
     #value-propositions {
       padding: 50px 0;
