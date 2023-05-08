@@ -125,6 +125,22 @@
   /* CSS para dispositivos moviles */
   @media screen and (max-width: 1000px) {
     /* Agregar botón para mostrar/ocultar menú */
+
+    .hero-description h2 {
+      font-size: 36px;
+      font-weight: bold;
+      font-family: 'Montserrat', sans-serif;
+      color: #5FC298;
+      margin-bottom: 20px;
+    }
+    
+    .hero-description p {
+      font-family: Arial, sans-serif;
+      font-size: 16px;
+      color: #333333;
+      line-height: 1.5;
+    }
+
     #heroes .container {
       display: flex;
       flex-direction: column;
@@ -158,11 +174,42 @@
     .hero-image {
       margin-top: 50px;
     }
+    .buttons-container .btn {
+      font-size: 16px;
+      font-weight: bold;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      justify-content: center;
+      padding: 18px 20px;
+      margin-right: 10px;
+      height: 60px;
+      border: none;
+      border-radius: 5px;
+      color: #ffffff;
+      background-color: #5FC298;
+      cursor: pointer;
+      transition: background-color 0.3s ease-in-out;
+    }
   }
   /* CSS para dispositivos de escritorio */
   @media screen and (min-width: 999px) {
     /* Agregar botón para mostrar/ocultar menú */
     
+    .hero-description h2 {
+      font-size: 48px;
+      font-weight: bold;
+      font-family: 'Montserrat', sans-serif;
+      color: #5FC298;
+      margin-bottom: 20px;
+    }
+    
+    .hero-description p {
+      font-family: Arial, sans-serif;
+      font-size: 18px;
+      color: #333333;
+      line-height: 1.5;
+    }
+
   #heroes .container {
     display: flex;
     flex-direction: row;
@@ -178,53 +225,19 @@
   .hero-image {
     flex: 1;
     display: flex;
+    position: relative;
     justify-content: flex-end;
     align-items: flex-end;
     height: 100%;
     order: 2; /* el elemento aparecerá primero en el orden */
     
   }
-  }
-
-  #heroes{
-    margin: 0px;
-  }
-
-  .hero-description h2 {
-    font-size: 48px;
-    font-weight: bold;
-    font-family: 'Montserrat', sans-serif;
-    color: #5FC298;
-    margin-bottom: 20px;
-  }
-  
-  .hero-description p {
-    font-family: Arial, sans-serif;
-    font-size: 18px;
-    color: #333333;
-    line-height: 1.5;
-  }
-  
-  .hero-description {
-    flex: 1;
-    order: 1; /* el elemento aparecerá después en el orden */
-  }
-  
-  
-  
-  .hero-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.3s ease-in-out;
-  }
-  
   .buttons-container .btn {
     font-size: 18px;
     font-weight: bold;
     font-family: Arial, sans-serif;
     text-align: center;
-    text-decoration: none;
+    justify-content: center;
     padding: 16px 24px;
     margin-right: 10px;
     height: 60px;
@@ -235,6 +248,22 @@
     cursor: pointer;
     transition: background-color 0.3s ease-in-out;
   }
+  }
+
+
+  .hero-description {
+    flex: 1;
+    order: 1; /* el elemento aparecerá después en el orden */
+  }
+  
+  .hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+
   
   .buttons-container .btn:hover {
     background-color: #4c9a80;
@@ -280,6 +309,7 @@
     background-size: auto;
     background-position: center;
     background-blend-mode: multiply;
+    padding: 20px 0px 0px 0px;
   }
 
   #value-propositions h2 {
@@ -305,8 +335,12 @@
   }
   
   .value-proposition {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     flex: 1;
-    height: 350px;
+    height: 400px;
     text-align: center;
     padding: 20px;
     margin: 10px;
@@ -335,11 +369,10 @@
     margin-bottom: 20px;
 }
 
-.value-proposition i {
-    font-size: 3rem;
-    margin-bottom: 10px;
-    display: block;
+.value-proposition img {
+    height: 64px;
 }
+
 
 @media screen and (max-width: 1280px) {
     #value-propositions .container {
@@ -351,88 +384,69 @@
     }
 }
 
-  
-  
-  /* Contact section styles */
-  @media (max-width: 1280px) {
-    #contact .row {
-      flex-direction: column;
-    }
-  }
-  
-  #contact .card {
-    border-radius: 10px;
-  }
-  
-  #contact .card h2 {
-    font-size: 36px;
-    font-weight: bold;
-    margin-bottom: 30px;
-  }
-  
-  #contact .card p {
-    margin-bottom: 20px;
-  }
-  
-  #contact .card form {
-    margin-top: 20px;
-  }
-  
-  #contact .card label {
-    display: block;
-    font-size: 18px;
-    font-weight: bold;
-    margin-bottom: 10px;
-  }
-  
-  #contact .card input,
-  #contact .card textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 20px;
-    border: none;
-    border-radius: 5px;
-    background-color: #f7f7f7;
-    font-size: 16px;
-  }
-  
-  #contact .card textarea {
-    height: 200px;
-  }
-  
-  #contact .card button {
-    display: block;
-    background-color: #5FC298;
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    font-size: 18px;
-    font-weight: bold;
-    margin-top: 20px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-  }
-  
-  #contact .card button:hover {
-    background-color: #009624;
-  }
-  
-  /* Nuevos estilos para ajustar los bloques en una sola fila en modo escritorio */
-  @media (min-width: 768px) {
-    #contact {
-      display: flex;
-      flex-wrap: wrap;
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-    
-    #contact .col-md-6 {
-      flex: 1;
-    }
-  }
-  
-  
+/*Contact styles*/
+
+#contacto {
+  background-color: #f2f2f2;
+  padding: 50px;
+  text-align: center;
+}
+
+#contacto h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+#contacto p {
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+
+#form {
+  display: inline-block;
+  text-align: center;
+}
+
+.field {
+  margin-bottom: 20px;
+}
+
+.field label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.field input,
+.field textarea {
+  display: block;
+  width: 350px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+#message {
+  height: 150px;
+  resize: none;
+
+}
+
+#form #button[type="submit"] {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#form #button[type="submit"]:hover {
+  background-color: #555;
+}
+
 
   /* Footer styles */
   footer {
@@ -474,61 +488,7 @@
       margin-bottom: 10px;
     }
   
-    
-  
-    #value-propositions {
-      padding: 50px 0;
-    }
-  
-    .value-proposition {
-      margin-bottom: 50px;
-    }
-  
-    #contact {
-      padding: 50px 0;
-    }
-  
-    #contact form {
-      max-width: none;
-    }
-  
-    #contact input,
-    #contact textarea {
-      margin-bottom: 10px;
-    }
-  }
   
 
-  .phone {
-    width: 320px;
-    height: 568px;
-    margin: 50px auto;
-    border-radius: 50px;
-    border: 10px solid #222;
-    background: #fff;
-    overflow: hidden;
   }
-  
-  .screen {
-    position: relative;
-    width: 100%;
-    height: 100%;
-  }
-  
-  .screen img {
-    display: block;
-    width: 100%;
-    height: auto;
-  }
-  
-  /* Canvas styles */
-  canvas {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: #fff;
-  }
-  
   

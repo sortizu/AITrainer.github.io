@@ -6,6 +6,14 @@
     <title>FitnessMind</title>
     <link rel="shortcut icon" href="img/flavicon.png" type="image/x-icon" />
     <link rel="stylesheet" href="css/style.css" />
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+    ></script>
+
+    <script type="text/javascript">
+      emailjs.init("GcYrn2aAIbJqeLjut");
+    </script>
   </head>
   <body>
     <header>
@@ -39,17 +47,36 @@
           </p>
           <br />
           <p>
-            ¿Te interesa nuestra aplicación?<br /> Por favor, no dudes en anotarte para obtener novedades de nuestra app.
+            ¿Te interesa nuestra aplicación?<br />
+            Por favor, no dudes en anotarte para obtener novedades de nuestra
+            app.
           </p>
           <div class="buttons-container">
-            <a href="https://forms.gle/AgoaHgWzna6rAvUk8" class="btn" target="_blank">¡Quiero anotarme!</a>
-            <a href="https://www.facebook.com/profile.php?id=100092522590830" class="social-btn" target="_blank">
+            <a
+              href="https://forms.gle/AgoaHgWzna6rAvUk8"
+              class="btn"
+              target="_blank"
+              >¡Quiero anotarme!</a
+            >
+            <a
+              href="https://www.facebook.com/profile.php?id=100092522590830"
+              class="social-btn"
+              target="_blank"
+            >
               <img src="img/facebook.png" alt="Facebook" />
             </a>
-            <a href="https://www.instagram.com/fitnessmind.ia/" class="social-btn" target="_blank">
+            <a
+              href="https://www.instagram.com/fitnessmind.ia/"
+              class="social-btn"
+              target="_blank"
+            >
               <img src="img/instagram.png" alt="Instagram" />
             </a>
-            <a href="https://twitter.com/fitnessmind_ia" class="social-btn" target="_blank">
+            <a
+              href="https://twitter.com/fitnessmind_ia"
+              class="social-btn"
+              target="_blank"
+            >
               <img src="img/twitter.png" alt="Twitter" />
             </a>
           </div>
@@ -60,7 +87,7 @@
       <h2 style="text-align: center">¿Qué te ofrecemos?</h2>
       <div class="container">
         <div class="value-proposition">
-          <i class="fas fa-dumbbell"></i>
+          <img src="img/no-money.png" alt="Free service icon" />
           <h3>Servicio totalmente gratuito</h3>
           <p>
             Obtén acceso a rutinas de entrenamiento, seguimiento de progreso y
@@ -68,7 +95,7 @@
           </p>
         </div>
         <div class="value-proposition">
-          <i class="fas fa-check-circle"></i>
+          <img src="img/fitness.png" alt="Exercise customization icon" />
           <h3>Personalización total de entrenamiento</h3>
           <p>
             Diseñamos planes de entrenamiento a medida que se adaptan a tus
@@ -77,7 +104,7 @@
           </p>
         </div>
         <div class="value-proposition">
-          <i class="fas fa-user-circle"></i>
+          <img src="img/goal.png" alt="Goals and motivation icon" />
           <h3>Mantenga la motivación</h3>
           <p>
             Nuestro sistema de recompensas y retos únicos te mantendrá motivado
@@ -87,7 +114,7 @@
           </p>
         </div>
         <div class="value-proposition">
-          <i class="fas fa-chart-line"></i>
+          <img src="img/clock.png" alt="Availability icon" />
           <h3>Donde quieras y cuando quieras</h3>
           <p>
             No importa dónde te encuentres o cuánto tiempo tengas disponible,
@@ -99,10 +126,34 @@
       </div>
     </section>
 
+    <section id="contacto">
+      <h2>¿Quieres conocer más sobre la app y sus posibilidades?</h2>
+      <p>Escríbenos para que podamos resolver todas tus dudas</p>
+      <form id="form">
+        <div class="field">
+          <label for="from_name">Correo electronico</label>
+          <input type="text" name="from_name" id="from_name">
+        </div>
+        <div class="field">
+          <label for="to_name">Nombre completo</label>
+          <input type="text" name="to_name" id="to_name">
+        </div>
+        <div class="field">
+          <label for="message">Mensaje</label>
+          <textarea name="message" id="message" rows="5" cols="50"></textarea>
+          
+        </div>
+      
+        <input type="submit" id="button" value="Enviar" >
+      </form>
+    </section>
+
+    
+
     <footer>
       <p>&copy; 2023 FitnessMind. Todos los derechos reservados.</p>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="/js/email.js"></script>
   </body>
 </html>
