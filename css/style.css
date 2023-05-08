@@ -61,48 +61,121 @@
   }
   
   .logo-container img {
+    
     width: 2em; /* ajusta el ancho aquí */
     margin-right: 0.5em; /* agrega un margen derecho para separar la imagen del texto */
   }
-  
+  /* CSS para dispositivos móviles */
+@media screen and (max-width: 767px) {
+  /* Agregar botón para mostrar/ocultar menú */
+  .menu-toggle {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+
+  /* Ocultar navegación */
+  nav {
+    display: none;
+    width: 100%;
+  }
+
+  /* Mostrar menú como una lista vertical */
   nav ul {
-    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    background-color: #ffffff;
     margin: 0;
-    padding: 0;
+    padding: 10px;
+  }
+
+  nav li {
+    margin: 10px 0;
+  }
+
+  /* Cambiar el tamaño de fuente del título */
+  header h1 {
+    font-size: 24px;
+    margin: 0;
+  }
+
+  /* Cambiar el tamaño de fuente de los enlaces de navegación */
+  nav a {
+    font-size: 20px;
+    text-align: center;
+  }
+
+  /* Cambiar el color del enlace activo */
+  nav a.active {
+    color: #009624;
+  }
+
+  /* Cambiar el color del fondo cuando se muestra el menú */
+  header.show-nav {
+    background-color: #ffffff;
+  }
+
+  /* Cambiar el color del enlace del botón de menú cuando se muestra el menú */
+  header.show-nav .menu-toggle {
+    color: #5FC298;
+  }
+
+  /* Cambiar el estilo del botón de menú cuando se muestra el menú */
+  header.show-nav .menu-toggle:before {
+    content: "\f00d";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+  }
+}
+
+/* CSS para dispositivos de escritorio */
+@media screen and (min-width: 768px) {
+  /* Ocultar el botón de menú en dispositivos de escritorio */
+  .menu-toggle {
+    display: none;
+  }
+
+  /* Mostrar la navegación en dispositivos de escritorio */
+  nav {
     display: flex;
     justify-content: flex-end;
+    width: auto;
   }
-  
+
+  nav ul {
+    display: flex;
+    align-items: center;
+  }
+
   nav li {
     margin: 0 10px;
   }
-  
+
+  header h1 {
+    font-size: 28px;
+  }
+
   nav a {
-    text-decoration: none;
-    color: #5FC298;
-    font-weight: bold;
     font-size: 16px;
-    transition: color 0.2s ease-in-out;
   }
-  
-  nav a:hover {
-    color: #009624;
+
+  /* Añadir estilo al enlace activo */
+  nav a.active {
+    border-bottom: 2px solid #009624;
+    padding-bottom: 4px;
   }
-  
-  @media screen and (max-width: 767px) {
-    header h1 {
-      font-size: 20px;
-    }
-  
-    header nav ul li a {
-      font-size: 14px;
-    }
-  }
+}
+
   
   /* Heroes section styles */
   #heroes .container {
     display: flex;
-    min-height: 100vh;
     flex-direction: row;
     align-items: center;
   }
@@ -122,9 +195,9 @@
     line-height: 1.5;
   }
   
-
   .hero-description {
     flex: 1;
+    order: 2; /* el elemento aparecerá después en el orden */
   }
   
   .hero-image {
@@ -133,7 +206,7 @@
     justify-content: flex-end;
     align-items: flex-end;
     height: 100%;
-    
+    order: 1; /* el elemento aparecerá primero en el orden */
   }
   
   .hero-image img {
@@ -142,6 +215,25 @@
     object-fit: cover;
     transition: transform 0.3s ease-in-out;
   }
+  
+  
+  @media only screen and (max-width: 768px) {
+    #heroes .container {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    .hero-description {
+      order: 2;
+      margin-top: 20px;
+      text-align: center;
+    }
+    .hero-image {
+      order: 1;
+      margin-bottom: 20px;
+    }
+  }
+  
   
   
   /* Value propositions section styles */
