@@ -1,83 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>FitnessMind</title>
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-bK44bL+kfY42scInMvC8WwKW1cKZXC+d+9XbJZ8Bx5nS72/Oy5zo87SZ5vz8Wn4I4l3Z+Wpo9Xv66x8WdDW0RQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-</head>
-<body>
-  <header>
-    <h1>FitnessMind</h1>
-    <nav>
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Features</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
-  
-  <section id="heroes">
-    <div class="container">
-      <div class="hero-description">
-        <h2>The ultimate AI-powered exercise app</h2>
-        <p>Get fit and healthy with our intelligent workout plans and personalized recommendations.</p>
-        <a href="#" class="btn">Try the app</a>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FitnessMind</title>
+    <link rel="shortcut icon" href="/img/icon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-bK44bL+kfY42scInMvC8WwKW1cKZXC+d+9XbJZ8Bx5nS72/Oy5zo87SZ5vz8Wn4I4l3Z+Wpo9Xv66x8WdDW0RQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="logo-container">
+        <img src="/img/icon.png" alt="FitnessMind logo" />
+        <h1>FitnessMind</h1>
       </div>
-      <div class="hero-image">
-        <img src="img/hero-image.jpg" alt="AI Exercise App">
-      </div>
-    </div>
-  </section>
-  
-  <section id="value-propositions">
-    <div class="container">
-      <div class="value-proposition">
-        <i class="fas fa-dumbbell"></i>
-        <h3>Intelligent workout plans</h3>
-        <p>Our app uses advanced AI algorithms to create customized workout plans that adapt to your fitness level and goals.</p>
-      </div>
-      <div class="value-proposition">
-        <i class="fas fa-check-circle"></i>
-        <h3>Real-time feedback</h3>
-        <p>Get instant feedback on your form and technique with our AI-powered virtual trainer.</p>
-      </div>
-      <div class="value-proposition">
-        <i class="fas fa-user-circle"></i>
-        <h3>Personalized recommendations</h3>
-        <p>Based on your performance and progress, our app will suggest exercises, workouts and nutrition plans tailored to your needs.</p>
-      </div>
-      <div class="value-proposition">
-        <i class="fas fa-chart-line"></i>
-        <h3>Data-driven insights</h3>
-        <p>Track your progress and see your results with our intuitive dashboard and analytics.</p>
-      </div>
-    </div>
-  </section>
-  
+      <nav>
+        <ul>
+          <li><a href="#heroes">Inicio</a></li>
+          <li><a href="#value-propositions">Características</a></li>
+          <li><a href="#">Contacto</a></li>
+        </ul>
+      </nav>
+    </header>
 
-  
-  <section id="contact">
-    <div class="container">
-      <h2>Contact us</h2>
-      <form action="#">
-        <label for="name">Name</label>
-        <input type="text" id="name" name="name" required>
-        <label for="email">Email</label>
-        <input type="email" id="email" name="email" required>
-        <label for="message">Message</label>
-        <textarea id="message" name="message" required></textarea>
-        <button type="submit" class="btn">Send message</button>
-      </form>
-    </div>
-  </section>
-  
-  <footer>
-    <p>&copy; 2023 AI Exercise App. All rights reserved.</p>
-  </footer>
+    <section id="heroes">
+      <div class="container">
+        <div class="hero-description">
+          <h2>
+            Consigue un cuerpo saludable con nuestra app de fitness inteligente
+          </h2>
+          <p>
+            Alcanzar tus objetivos de fitness nunca ha sido tan fácil. Nuestra
+            aplicación ofrece planes de entrenamiento y dieta personalizados,
+            adaptados a tus necesidades y preferencias. Despídete de las
+            costosas cuotas de gimnasio y da la bienvenida a una vida más
+            saludable.
+          </p>
+          <br />
+          <a href="simulation.html" class="btn" target="_blank"
+            >¡Me interesa!</a
+          >
+        </div>
+        <div class="hero-image">
+          <img src="img/hero-image.png" alt="AI Exercise App" />
+        </div>
+      </div>
+    </section>
 
-  <script src="script.js"></script>
-</body>
+    <section id="value-propositions">
+      <h2 style="text-align: center">¿Qué te ofrecemos?</h2>
+      <div class="container">
+        <div class="value-proposition">
+          <i class="fas fa-dumbbell"></i>
+          <h3>Servicio totalmente gratuito</h3>
+          <p>
+            Obtén acceso a rutinas de entrenamiento, seguimiento de progreso y
+            nutrición, todo sin costo alguno.
+          </p>
+        </div>
+        <div class="value-proposition">
+          <i class="fas fa-check-circle"></i>
+          <h3>Personalización total de entrenamiento</h3>
+          <p>
+            Diseñamos planes de entrenamiento a medida que se adaptan a tus
+            necesidades y objetivos únicos gracias a nuestra tecnología de IA
+            avanzada.
+          </p>
+        </div>
+        <div class="value-proposition">
+          <i class="fas fa-user-circle"></i>
+          <h3>Mantenga la motivación</h3>
+          <p>
+            Nuestro sistema de recompensas y retos únicos te mantendrá motivado
+            y en el buen camino para lograr tus objetivos de fitness. Con
+            desafíos personalizados y recompensas únicas que se ajustan a tu
+            progreso.
+          </p>
+        </div>
+        <div class="value-proposition">
+          <i class="fas fa-chart-line"></i>
+          <h3>Donde quieras y cuando quieras</h3>
+          <p>
+            No importa dónde te encuentres o cuánto tiempo tengas disponible,
+            nuestra aplicación se adapta a tus necesidades. Obtén acceso a
+            rutinas de entrenamiento efectivas que se ajustan a tu horario y
+            ubicación.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <p>&copy; 2023 FitnessMind. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
 </html>

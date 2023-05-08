@@ -40,6 +40,9 @@
   
   /* Header styles */
   header {
+    position: sticky;
+    z-index: 1;
+    top: 0;
     background-color: #ffffff;
     color: #5FC298;
     height: 60px;
@@ -47,12 +50,19 @@
     align-items: center;
     justify-content: space-between;
     padding: 0 20px;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0));
+    opacity: 0.95;
+    width: 100%;
+  }
+
+  .logo-container {
+    display: flex;
+    align-items: center;
   }
   
-  h1 {
-    font-size: 24px;
-    font-weight: bold;
-    margin: 0;
+  .logo-container img {
+    width: 2em; /* ajusta el ancho aquí */
+    margin-right: 0.5em; /* agrega un margen derecho para separar la imagen del texto */
   }
   
   nav ul {
@@ -60,6 +70,7 @@
     margin: 0;
     padding: 0;
     display: flex;
+    justify-content: flex-end;
   }
   
   nav li {
@@ -78,7 +89,6 @@
     color: #009624;
   }
   
-  
   @media screen and (max-width: 767px) {
     header h1 {
       font-size: 20px;
@@ -89,16 +99,30 @@
     }
   }
   
-  
-  
   /* Heroes section styles */
   #heroes .container {
     display: flex;
-    height: 100vh;
+    min-height: 100vh;
     flex-direction: row;
     align-items: center;
   }
   
+  .hero-description h2 {
+    font-size: 48px;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+    color: #5FC298;
+    margin-bottom: 20px;
+  }
+  
+  .hero-description p {
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    color: #333333;
+    line-height: 1.5;
+  }
+  
+
   .hero-description {
     flex: 1;
   }
@@ -109,26 +133,45 @@
     justify-content: flex-end;
     align-items: flex-end;
     height: 100%;
+    
   }
   
   .hero-image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    transition: transform 0.3s ease-in-out;
   }
   
   
   /* Value propositions section styles */
+
+  
   #value-propositions {
-    background-color: #5FC298;
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url('ruta/imagen-de-patron');
+    background-color: #5FC298;
+    background-image: url('/img/pattern.png');
     background-repeat: repeat;
+    background-size: auto;
+    background-position: center;
+    background-blend-mode: multiply;
+  }
+
+  #value-propositions h2 {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    color: white;
+    padding: 10px 0px;
+    transform: translateX(-50%);
   }
   
+  
   #value-propositions .container {
+    position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -138,7 +181,6 @@
     background-color: transparent;
     padding: 50px 0;
   }
-  
   
   .value-proposition {
     flex: 1;
@@ -152,67 +194,77 @@
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease-in-out;
     background-color: rgba(255, 255, 255, 0.2);
-  }
-  
-  .value-proposition:hover {
+}
+
+.value-proposition:hover {
     transform: translateY(-5px);
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
-  }
-  
-  .value-proposition h3 {
+}
+
+.value-proposition h3 {
     font-size: 1.5rem;
     font-weight: bold;
     margin-bottom: 10px;
-  }
-  
-  .value-proposition p {
+}
+
+.value-proposition p {
     font-size: 1rem;
     line-height: 1.5;
     margin-bottom: 20px;
-  }
-  
-  .value-proposition i {
+}
+
+.value-proposition i {
     font-size: 3rem;
     margin-bottom: 10px;
     display: block;
-  }
-  
-  @media screen and (max-width: 768px) {
+}
+
+@media screen and (max-width: 768px) {
     #value-propositions .container {
-      flex-wrap: wrap;
+        flex-wrap: wrap;
     }
     .value-proposition {
-      flex-basis: calc(50% - 20px);
-      margin-bottom: 20px;
+        flex-basis: calc(50% - 20px);
+        margin-bottom: 20px;
     }
-  }
+}
+
   
   
   /* Contact section styles */
-  #contact {
-    padding: 100px 0;
+  @media (max-width: 767px) {
+    #contact .row {
+      flex-direction: column;
+    }
   }
   
-  #contact h2 {
+  #contact .card {
+    border-radius: 10px;
+  }
+  
+  #contact .card h2 {
     font-size: 36px;
     font-weight: bold;
     margin-bottom: 30px;
   }
   
-  #contact form {
-    max-width: 600px;
-    margin: 0 auto;
+  #contact .card p {
+    margin-bottom: 20px;
   }
   
-  #contact label {
+  #contact .card form {
+    margin-top: 20px;
+  }
+  
+  #contact .card label {
     display: block;
     font-size: 18px;
     font-weight: bold;
     margin-bottom: 10px;
   }
   
-  #contact input,
-  #contact textarea {
+  #contact .card input,
+  #contact .card textarea {
     width: 100%;
     padding: 10px;
     margin-bottom: 20px;
@@ -222,13 +274,13 @@
     font-size: 16px;
   }
   
-  #contact textarea {
+  #contact .card textarea {
     height: 200px;
   }
   
-  #contact button {
+  #contact .card button {
     display: block;
-    background-color: #00c853;
+    background-color: #5FC298;
     color: #fff;
     padding: 10px 20px;
     border: none;
@@ -240,10 +292,26 @@
     transition: all 0.3s ease;
   }
   
-  #contact button:hover {
+  #contact .card button:hover {
     background-color: #009624;
   }
   
+  /* Nuevos estilos para ajustar los bloques en una sola fila en modo escritorio */
+  @media (min-width: 768px) {
+    #contact {
+      display: flex;
+      flex-wrap: wrap;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    
+    #contact .col-md-6 {
+      flex: 1;
+    }
+  }
+  
+  
+
   /* Footer styles */
   footer {
     background-color: #333;
@@ -320,4 +388,38 @@
       margin-bottom: 10px;
     }
   }
+  
+
+  .phone {
+    width: 320px;
+    height: 568px;
+    margin: 50px auto;
+    border-radius: 50px;
+    border: 10px solid #222;
+    background: #fff;
+    overflow: hidden;
+  }
+  
+  .screen {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .screen img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  
+  /* Canvas styles */
+  canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+  }
+  
   
