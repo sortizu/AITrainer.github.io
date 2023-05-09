@@ -420,7 +420,7 @@
 .field input,
 .field textarea {
   display: block;
-  width: 350px;
+  width: 300px;
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
