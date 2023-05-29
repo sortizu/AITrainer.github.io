@@ -637,7 +637,7 @@
     height: 100%;
     width: 50%;
     gap: 10px;
-    padding: 30px 50px;
+    padding: 60px 50px;
   }
   
   .Estandares{
@@ -659,7 +659,7 @@
   
   
   .Suscripcion p{
-    width: 100%;
+    width: 85%;
     text-align: left;
   }
   
