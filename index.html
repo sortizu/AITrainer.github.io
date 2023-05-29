@@ -24,19 +24,27 @@
       <nav>
         <ul>
           <li><a href="#heroes">Inicio</a></li>
-          <li><a href="#value-propositions">Características</a></li>
+          <li><a href="#PreguntaPropuesta">Características</a></li>
+          <li><a href="#value-propositions">Diferencias con otras apps</a></li>
+          <li><a href="#SuscripcionYEstandares">Suscripción y estándares</a></li>
+          <li><a href="#contacto">Contáctanos</a></li>
         </ul>
       </nav>
     </header>
 
     <section id="heroes">
       <div class="container">
+        <video autoplay loop muted playsinline id="hero-video">
+          <source src="video/background_stock_video.mp4" type="video/mp4" />
+        </video>
+        <!--
         <div class="hero-image">
           <img src="img/fitness-men.png" alt="AI Exercise App" />
-        </div>
+        </div>-->
         <div class="hero-description">
           <h2>
-            Consigue un cuerpo saludable con nuestra app de fitness inteligente
+            ¡Consigue un cuerpo saludable con nuestra app de fitness
+            inteligente!
           </h2>
           <p>
             Alcanzar tus objetivos de fitness nunca ha sido tan fácil. Nuestra
@@ -81,38 +89,96 @@
             </a>
           </div>
         </div>
+        <div class="arrow-icon">
+          <div>Más información</div>
+          <a href="#PreguntaPropuesta">
+            <img src="img/down.png" alt="Ver propuestas" />
+          </a>
+        </div>
       </div>
     </section>
+
+    <div id="ListaDePropuestasDescritas">
+      <div id="PreguntaPropuesta">
+        <h3>¿Qué te ofrecemos?</h3>
+      </div>
+
+      <section class="descripcion-propuesta">
+        <div class="descripcion-container">
+          <div class="descripcion-image">
+            <img
+              src="img/propuestas_nutricion.png"
+              alt="Imagen de la propuesta"
+            />
+          </div>
+          <div class="descripcion-content">
+            <img src="img/nutrition.png" alt="Imagen de la propuesta" />
+            <h3>Dietas y planes de nutrición</h3>
+            <p>
+              Nuestros sistemas de inteligencia artifical, mediante un análisis
+              detallado de tus necesidades y preferencias, podra diseñar un plan
+              nutricional adaptado a ti. Disfruta de comidas equilibradas y
+              deliciosas, obteniendo los nutrientes necesarios para mantenerte
+              en forma y con energía durante todo el día.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="descripcion-propuesta">
+        <div class="descripcion-container">
+          <div class="descripcion-content">
+            <img src="img/fitness.png" alt="Imagen de la propuesta" />
+            <h3>Rutinas de entrenamiento personalizadas</h3>
+            <p>
+            Diseñamos planes de entrenamiento a medida que se adaptan a tus
+            necesidades y objetivos únicos gracias a nuestra tecnología de IA
+            avanzada.
+            </p>
+          </div>
+          <div class="descripcion-image">
+            <img
+              src="img/propuestas_entrenamiento.png"
+              alt="Imagen de la propuesta"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section class="descripcion-propuesta">
+        <div class="descripcion-container">
+          <div class="descripcion-image">
+            <img
+              src="img/propuesta_motivacion.png"
+              alt="Imagen de la propuesta"
+            />
+          </div>
+          <div class="descripcion-content">
+            <img src="img/goal.png" alt="Imagen de la propuesta" />
+            <h3>Mantente motivado</h3>
+            <p>
+              Nuestro sistema de recompensas y retos únicos te mantendrá motivado
+            y en el buen camino para lograr tus objetivos de fitness. Con
+            desafíos personalizados y recompensas únicas que se ajustan a tu
+            progreso.
+            </p>
+          </div>
+        </div>
+      </section>
+    </div>
+
     <section id="value-propositions">
-      <h2 style="text-align: center">¿Qué te ofrecemos?</h2>
+      <h2 style="text-align: center">¿Qué nos diferencia de otras apps?</h2>
       <div class="container">
         <div class="value-proposition">
           <img src="img/no-money.png" alt="Free service icon" />
           <h3>Servicio totalmente gratuito</h3>
           <p>
             Obtén acceso a rutinas de entrenamiento, seguimiento de progreso y
-            nutrición, todo sin costo alguno.
+            nutrición, todo sin costo alguno con nuestro plan básico.
           </p>
         </div>
-        <div class="value-proposition">
-          <img src="img/fitness.png" alt="Exercise customization icon" />
-          <h3>Personalización total de entrenamiento</h3>
-          <p>
-            Diseñamos planes de entrenamiento a medida que se adaptan a tus
-            necesidades y objetivos únicos gracias a nuestra tecnología de IA
-            avanzada.
-          </p>
-        </div>
-        <div class="value-proposition">
-          <img src="img/goal.png" alt="Goals and motivation icon" />
-          <h3>Mantenga la motivación</h3>
-          <p>
-            Nuestro sistema de recompensas y retos únicos te mantendrá motivado
-            y en el buen camino para lograr tus objetivos de fitness. Con
-            desafíos personalizados y recompensas únicas que se ajustan a tu
-            progreso.
-          </p>
-        </div>
+
         <div class="value-proposition">
           <img src="img/clock.png" alt="Availability icon" />
           <h3>Donde quieras y cuando quieras</h3>
@@ -126,29 +192,49 @@
       </div>
     </section>
 
+    <section id="SuscripcionYEstandares">
+      <div class="Suscripcion">
+        <h2>¿Quieres más beneficios?</h2>
+        <p>Considera en suscribirte a nuestra aplicación en un futuro para obtener lo siguiente:</p>
+        <ul>
+          <li>Sin anuncios</li>
+          <li>Obtén las nuevas funcionalidades de la app antes que nadie</li>
+          <li>Creación de horarios de entrenamiento</li>
+          <li>Recordatorios y alarmas</li>
+          <li>Diagramas para realización de ejercicios</li>
+        </ul>
+      </div>
+      <div class="Estandares">
+        <h2>¡Mantente activo, Mantente saludable!</h2>
+        <p>
+          Nuestra aplicación se compromete a mantenerte saludable 
+          siguiendo los estándares y recomendaciones de las prestigiosas
+          organizaciones como lo son la OMS, el CENAN o INS.
+          Tu salud es nuestra prioridad y estamos aquí para 
+          guiarte en tu camino hacia una vida más saludable.</p>
+      </div>
+    </section>
+
     <section id="contacto">
       <h2>¿Quieres conocer más sobre la app y sus posibilidades?</h2>
       <p>Escríbenos para que podamos resolver todas tus dudas</p>
       <form id="form">
         <div class="field">
           <label for="from_name">Correo electronico</label>
-          <input type="text" name="from_name" id="from_name">
+          <input type="text" name="from_name" id="from_name" />
         </div>
         <div class="field">
           <label for="to_name">Nombre completo</label>
-          <input type="text" name="to_name" id="to_name">
+          <input type="text" name="to_name" id="to_name" />
         </div>
         <div class="field">
           <label for="message">Mensaje</label>
           <textarea name="message" id="message" rows="5" cols="50"></textarea>
-          
         </div>
-      
-        <input type="submit" id="button" value="Enviar" >
+
+        <input type="submit" id="button" value="Enviar" />
       </form>
     </section>
-
-    
 
     <footer>
       <p>&copy; 2023 FitnessMind. Todos los derechos reservados.</p>

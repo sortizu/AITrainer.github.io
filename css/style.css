@@ -4,13 +4,19 @@
     margin: 0;
     padding: 0;
   }
-  
+  html {
+    scroll-behavior: smooth;
+  }
   body {
     font-family: Arial, sans-serif;
     font-size: 16px;
     line-height: 1.5;
     color: #333;
-    background-color: #fff;
+    background-color: whitesmoke;
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
   }
   
   a {
@@ -40,17 +46,17 @@
   
   /* Header styles */
   header {
-    position: sticky;
+    position: fixed;
     z-index: 1;
     top: 0;
-    background-color: #ffffff;
+    /*background-color: #ffffff;*/
     color: #5FC298;
     height: 60px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 0 20px;
-    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0));
+    /*background: linear-gradient(to bottom, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0));*/
     opacity: 0.95;
     width: 100%;
   }
@@ -65,6 +71,10 @@
     
     width: 2em; /* ajusta el ancho aquí */
     margin-right: 0.5em; /* agrega un margen derecho para separar la imagen del texto */
+  }
+
+  header nav ul {
+    list-style-type: none;
   }
   /* CSS para dispositivos móviles */
 @media screen and (max-width: 767px) {
@@ -92,15 +102,18 @@
     display: flex;
     justify-content: flex-end;
     width: auto;
+    
   }
 
   nav ul {
     display: flex;
     align-items: center;
+    
   }
 
   nav li {
     margin: 0 10px;
+    
   }
 
   header h1 {
@@ -109,6 +122,7 @@
 
   nav a {
     font-size: 16px;
+    color: white;
   }
 
   /* Añadir estilo al enlace activo */
@@ -126,8 +140,12 @@
   @media screen and (max-width: 1000px) {
     /* Agregar botón para mostrar/ocultar menú */
 
+    .hero-description {
+      width: 100%;
+    }
+
     .hero-description h2 {
-      font-size: 36px;
+      font-size: 30px;
       font-weight: bold;
       font-family: 'Montserrat', sans-serif;
       color: #5FC298;
@@ -136,8 +154,8 @@
     
     .hero-description p {
       font-family: Arial, sans-serif;
-      font-size: 16px;
-      color: #333333;
+      font-size: 15px;
+      color: white;
       line-height: 1.5;
     }
 
@@ -150,7 +168,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      margin-top: 30px;
+      margin-top: 20px;
     }
     .hero-image {
       flex: 1;
@@ -175,12 +193,12 @@
       margin-top: 50px;
     }
     .buttons-container .btn {
-      font-size: 16px;
+      font-size: 14px;
       font-weight: bold;
       font-family: Arial, sans-serif;
       text-align: center;
       justify-content: center;
-      padding: 18px 20px;
+      
       margin-right: 10px;
       height: 60px;
       border: none;
@@ -195,8 +213,12 @@
   @media screen and (min-width: 999px) {
     /* Agregar botón para mostrar/ocultar menú */
     
+    .hero-description {
+      width: 60%;
+    }
+
     .hero-description h2 {
-      font-size: 48px;
+      font-size: 38px;
       font-weight: bold;
       font-family: 'Montserrat', sans-serif;
       color: #5FC298;
@@ -205,20 +227,20 @@
     
     .hero-description p {
       font-family: Arial, sans-serif;
-      font-size: 18px;
-      color: #333333;
+      font-size: 16px;
+      color: white;
       line-height: 1.5;
     }
 
   #heroes .container {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
   }
   
   .buttons-container {
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
     margin-top: 30px;
   }
@@ -250,10 +272,53 @@
   }
   }
 
+  #heroes {
+    position: relative;
+    min-height: 100vh;
+    overflow: hidden;
+    display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  }
+  
+  #hero-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    filter: brightness(50%) contrast(90%);
+    border-bottom-left-radius: 5%;
+    border-bottom-right-radius: 5%;
+  }
+  
+  .arrow-icon{
+    color: white;
+    font-size: 14px;
+  margin-top: 20px;
+  }
+  
+  .arrow-icon img{
+    width: 50px;
+    /* Resto de tus estilos aquí */
+  }
+
+  #heroes .container {
+    overflow: hidden;
+    padding-top: 60px;
+    
+  }
+  
 
   .hero-description {
-    flex: 1;
-    order: 1; /* el elemento aparecerá después en el orden */
+    top: 50%;
+    text-align: center;
+    
+    margin-bottom: 20px;
   }
   
   .hero-image img {
@@ -294,7 +359,128 @@
     height: auto;
   }
   
+  /*Descripcion de propuesta*/
+
+  /*Moviles*/
+  @media screen and (max-width: 999px) {
+    
+    
+    #ListaDePropuestasDescritas .descripcion-propuesta:first-of-type .descripcion-image{
+      order: 2;
+    }
+
+    #ListaDePropuestasDescritas .descripcion-propuesta:last-of-type .descripcion-image{
+      order: 2;
+    }
+
+    .descripcion-propuesta {
+      padding-bottom: 50px;
+    }
+    
+    .descripcion-container {
+      /* Estilos para el contenedor de la descripción */
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 10px;
+    }
+    
+    .descripcion-image img{
+      width: 100%;
+    }
+    .descripcion-image{
+      width: 100%;
+    }
+    
+    .descripcion-content {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 10px;
+      gap: 20px;
+      /* Estilos para el contenido de la descripción */
+    }
+    
+    .descripcion-content h3 {
+      font-size: 1.5rem;
+      font-weight: bold;
+      text-align: center;
+      color: #5FC298;
+    }
+    
+    .descripcion-content p {
+      font-size: 1rem;
+      line-height: 1.5;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    #PreguntaPropuesta{
+      font-size: 1.25rem;
+      line-height: 1.5;
+      margin-top: 20px;
+      text-align: center;
+      color: #5FC298;
+    }
+  }
+
+  /*Escritorio*/
+  @media screen and (min-width: 999px) {
+    .descripcion-propuesta {
+      padding-bottom: 10px;
+    }
+    
+    .descripcion-container {
+      /* Estilos para el contenedor de la descripción */
+      display: flex;
+      align-items: center;
+      padding: 20px;
+    }
+    
+    .descripcion-image img{
+      width: 100%;
+    }
+    .descripcion-image{
+      width: 50%;
+    }
+    
+    .descripcion-content {
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 50px;
+      gap: 20px;
+      /* Estilos para el contenido de la descripción */
+    }
+    
+    .descripcion-content h3 {
+      font-size: 1.5rem;
+      font-weight: bold;
+      text-align: center;
+      color: #5FC298;
+    }
+    
+    .descripcion-content p {
+      font-size: 1rem;
+      line-height: 1.5;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    #PreguntaPropuesta{
+      font-size: 1.25rem;
+      line-height: 1.5;
+      margin-top: 20px;
+      text-align: center;
+      color: #5FC298;
+    }
+  }
+
   
+  
+
   /* Value propositions section styles */
 
   
@@ -340,7 +526,7 @@
     justify-content: center;
     align-items: center;
     flex: 1;
-    height: 400px;
+    height: 250px;
     text-align: center;
     padding: 20px;
     margin: 10px;
@@ -373,13 +559,124 @@
     height: 64px;
 }
 
+/*Suscripcion y estandares*/
+/*Moviles*/
+@media screen and (max-width: 999px){
+  #SuscripcionYEstandares{
+    display: flex;
+    flex-direction: column;
 
-@media screen and (max-width: 1280px) {
+    align-items: center;
+    flex: 1;
+    height: 500px;
+    text-align: center;
+    color: white;
+  }
+  
+  .Suscripcion{
+    background-color: #333;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    height: 100%;
+    width: 100%;
+    gap: 20px;
+    padding: 50px 40px;
+  }
+  
+  .Estandares{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #333;
+    height: 100%;
+    width: 100%;
+    gap: 10px;
+    height: 100%;
+    padding: 50px 40px;
+  }
+    
+  .Estandares p{
+    width: 100%;
+  }
+  
+  
+  .Suscripcion p{
+    width: 100%;
+    text-align: left;
+    text-align: justify;
+  }
+  
+  #SuscripcionYEstandares ul li{
+    text-align: left;
+  }
+}
+
+/*Escritorio*/
+@media screen and (min-width: 999px){
+  #SuscripcionYEstandares{
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+    flex: 1;
+    text-align: center;
+    color: white;
+  }
+  
+  .Suscripcion{
+    background-color: #333;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    height: 100%;
+    width: 50%;
+    gap: 10px;
+    padding: 30px 50px;
+  }
+  
+  .Estandares{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #333;
+    height: 100%;
+    width: 50%;
+    gap: 10px;
+    height: 100%;
+    width: 50%;
+  }
+    
+  .Estandares p{
+    width: 75%;
+  }
+  
+  
+  .Suscripcion p{
+    width: 100%;
+    text-align: left;
+  }
+  
+  #SuscripcionYEstandares ul li{
+    text-align: left;
+  }
+}
+
+
+
+@media screen and (max-width: 999px) {
     #value-propositions .container {
+      padding-top: 100px;
         flex-wrap: wrap;
     }
     .value-proposition {
-        flex-basis: calc(50% - 20px);
+        height: 350px;
         margin-bottom: 20px;
     }
 }
