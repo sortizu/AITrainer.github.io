@@ -8,4 +8,4 @@ Technologies used:
 - Bootstrap
 - Email JS
 
-You can see the page here [here](https://sortizu.github.io/AITrainer.github.io/)
+The website was desployed using Github Pages, if you are interested you can see it here: [FitnessMind](https://sortizu.github.io/AITrainer.github.io/)
