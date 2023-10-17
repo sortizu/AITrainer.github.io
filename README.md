@@ -7,4 +7,5 @@ Technologies used:
 - JavaScript
 - Bootstrap
 - Email JS
+
 You can see the page here [here](https://sortizu.github.io/AITrainer.github.io/)
